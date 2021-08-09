@@ -41,6 +41,8 @@ cd music-genre-classification
 
 Run notebook `notebooks/2021-08-09_model-production.ipynb` to produce the production model into `src/models`.
 
+Edit the `model_path` string in `configs/configs.yaml`.
+
 ### 3. (Optional) Run Tests
 
 1. Create a Python 3.7 environment
