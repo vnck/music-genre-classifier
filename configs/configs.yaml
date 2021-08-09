@@ -1,5 +1,5 @@
 meta:
-  name: logistic-regression
+  name: music-genre-classifier
   author: Ivan Chuang
   description: Music genre classifier
   dependencies: requirements.txt
