@@ -1,0 +1,24 @@
+meta:
+  name: logistic-regression
+  author: Ivan Chuang
+  description: Music genre classifier
+  dependencies: requirements.txt
+model:
+  path: 'models/2021-08-09-random_forest.joblib'
+  type: 'random forest classifier'
+  labels: ['classic pop and rock','dance and electronica','folk','jazz and blues','metal','pop','punk','soul and reggae']
+load_data:
+  how: csv
+  csv:
+    path: data/features.csv
+features:
+  binary:
+    columns: ['mode']
+  categorical:
+    columns: ['key']
+    one_hot_encode: True
+    one_hot_categories: [0,1,2,3,4,5,6,7,8,9,10,11]
+  numerical:
+    columns: ['time_signature','duration','vect_3', 'vect_4', 'vect_5', 'vect_6', 'vect_7', 'vect_8', 'vect_9', 'vect_11', 'vect_12', 'vect_15', 'vect_19', 'vect_21', 'vect_23', 'vect_24', 'vect_25', 'vect_26', 'vect_27', 'vect_28', 'vect_29', 'vect_30', 'vect_34', 'vect_37', 'vect_39', 'vect_42', 'vect_43', 'vect_44', 'vect_46', 'vect_47', 'vect_51', 'vect_55', 'vect_56', 'vect_57', 'vect_58', 'vect_59', 'vect_61', 'vect_62', 'vect_66', 'vect_67', 'vect_69', 'vect_71', 'vect_74', 'vect_75', 'vect_76', 'vect_77', 'vect_79', 'vect_81', 'vect_83', 'vect_85', 'vect_87', 'vect_88', 'vect_91', 'vect_92', 'vect_94', 'vect_95', 'vect_97', 'vect_102', 'vect_104', 'vect_105', 'vect_109', 'vect_110', 'vect_112', 'vect_113', 'vect_116', 'vect_117', 'vect_121', 'vect_122', 'vect_123', 'vect_125', 'vect_126', 'vect_129', 'vect_133', 'vect_135', 'vect_138', 'vect_139', 'vect_140', 'vect_141', 'vect_143', 'vect_145', 'vect_147', 'vect_148']
+    normalization: standard
+    impute_missing: median
